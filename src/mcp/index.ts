@@ -4,8 +4,10 @@ import { Logger } from "../utils/logger.js";
 import {
   downloadFigmaImagesTool,
   getFigmaDataTool,
+  generateNcdsHtmlTool,
   type DownloadImagesParams,
   type GetFigmaDataParams,
+  type GenerateNcdsHtmlParams,
 } from "./tools/index.js";
 
 const serverInfo = {
@@ -58,6 +60,14 @@ function registerTools(
       (params: DownloadImagesParams) => downloadFigmaImagesTool.handler(params, figmaService),
     );
   }
+
+  // Register generate_ncds_html tool
+  server.tool(
+    generateNcdsHtmlTool.name,
+    generateNcdsHtmlTool.description,
+    generateNcdsHtmlTool.parameters,
+    (params: GenerateNcdsHtmlParams) => generateNcdsHtmlTool.handler(params, figmaService),
+  );
 }
 
 export { createServer };

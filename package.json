@@ -1,5 +1,5 @@
 {
-  "name": "figma-developer-mcp",
+  "name": "figma-developer-mcp-ncds",
   "version": "0.5.1",
   "description": "Model Context Protocol server for Figma integration",
   "type": "module",
@@ -23,17 +23,17 @@
     "lint": "eslint .",
     "format": "prettier --write \"src/**/*.ts\"",
     "inspect": "pnpx @modelcontextprotocol/inspector",
-    "prepack": "pnpm build",
+    "prepack": "npm run build",
     "changeset": "changeset add",
     "version": "changeset version && git add -A",
     "beta:start": "changeset pre enter beta",
     "beta:end": "changeset pre exit",
-    "beta:version": "changeset version && pnpm install --lockfile-only",
+    "beta:version": "changeset version && npm run install --lockfile-only",
     "beta:publish": "changeset publish",
-    "prerelease": "pnpm build",
+    "prerelease": "npm run build",
     "release": "changeset publish && git push --follow-tags",
-    "pub:release": "pnpm build && npm publish",
-    "pub:release:beta": "pnpm build && npm publish --tag beta"
+    "pub:release": "npm run build && npm publish",
+    "pub:release:beta": "npm run build && npm publish --tag beta"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -41,7 +41,7 @@
   "packageManager": "pnpm@10.10.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GLips/Figma-Context-MCP.git"
+    "url": "git+https://github.com/nhn-commerce-fe/figma-developer-mcp-ncds.git"
   },
   "homepage": "https://www.framelink.ai",
   "keywords": [
@@ -54,6 +54,7 @@
   "dependencies": {
     "@figma/rest-api-spec": "^0.33.0",
     "@modelcontextprotocol/sdk": "^1.10.2",
+    "@ncds/ui-admin": "^1.3.0",
     "@types/yargs": "^17.0.33",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.7",
