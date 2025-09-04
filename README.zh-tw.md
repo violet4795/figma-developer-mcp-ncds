@@ -6,7 +6,7 @@
 </a>
 
 <div align="center">
-  <h1>Framelink Figma MCP 伺服器</h1>
+  <h1>Framelink Figma MCP 伺服器 + NCDS</h1>
   <p>
     🌐 可用語言:
     <a href="README.md">English (英文)</a> |
@@ -32,7 +32,7 @@
 
 <br/>
 
-使用此 [Model Context Protocol](https://modelcontextprotocol.io/introduction) 伺服器，讓 [Cursor](https://cursor.sh/) 和其他由 AI 驅動的程式碼工具存取您的 Figma 檔案。
+此專案從 Framelink Figma MCP 伺服器分支，包含了基於 NCDS 的額外實現。使用此 [Model Context Protocol](https://modelcontextprotocol.io/introduction) 伺服器，讓 [Cursor](https://cursor.sh/) 和其他由 AI 驅動的程式碼工具存取您的 Figma 檔案。
 
 當 Cursor 可以存取 Figma 設計資料時，它在一次性精準實現設計方面，比貼上螢幕截圖等替代方案**好得多**。
 
@@ -70,7 +70,7 @@
   "mcpServers": {
     "Framelink Figma MCP": {
       "command": "npx",
-      "args": ["-y", "figma-developer-mcp", "--figma-api-key=YOUR-KEY", "--stdio"]
+      "args": ["-y", "figma-developer-mcp-ncds", "--figma-api-key=YOUR-KEY", "--stdio"]
     }
   }
 }
@@ -83,7 +83,7 @@
   "mcpServers": {
     "Framelink Figma MCP": {
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "figma-developer-mcp", "--figma-api-key=YOUR-KEY", "--stdio"]
+      "args": ["/c", "npx", "-y", "figma-developer-mcp-ncds", "--figma-api-key=YOUR-KEY", "--stdio"]
     }
   }
 }
@@ -91,7 +91,7 @@
 
 或者您可以在 `env` 欄位中設定 `FIGMA_API_KEY` 和 `PORT`。
 
-如果您需要有關如何設定 Framelink Figma MCP 伺服器的更多資訊，請參閱 [Framelink 文件](https://www.framelink.ai/docs/quickstart?utm_source=github&utm_medium=referral&utm_campaign=readme)。
+如果您需要有關如何設定 NCDS Figma MCP 伺服器的更多資訊，請參閱 [Framelink 文件](https://www.framelink.ai/docs/quickstart?utm_source=github&utm_medium=referral&utm_campaign=readme)。
 
 ## Star 歷史
 
@@ -99,4 +99,4 @@
 
 ## 了解更多
 
-Framelink Figma MCP 伺服器既簡單又強大。請前往 [Framelink](https://framelink.ai?utm_source=github&utm_medium=referral&utm_campaign=readme) 網站了解更多資訊，以充分利用它。
+此 NCDS Figma MCP 伺服器從 Framelink 專案分支並實現了基於 NCDS 的額外原始碼生成功能。原始的 Framelink Figma MCP 伺服器既簡單又強大。請前往 [Framelink](https://framelink.ai?utm_source=github&utm_medium=referral&utm_campaign=readme) 網站了解更多資訊，以充分利用它。

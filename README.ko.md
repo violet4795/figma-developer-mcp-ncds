@@ -6,7 +6,7 @@
 </a>
 
 <div align="center">
-  <h1>Framelink Figma MCP 서버</h1>
+  <h1>Framelink Figma MCP 서버 + NCDS</h1>
   <p>
     🌐 다른 언어:
     <a href="README.md">English (영어)</a> |
@@ -32,7 +32,7 @@
 
 <br/>
 
-[Cursor](https://cursor.sh/) 및 기타 AI 기반 코딩 도구에 [Model Context Protocol](https://modelcontextprotocol.io/introduction) 서버를 통해 Figma 파일에 대한 접근 권한을 부여하세요.
+이 프로젝트는 Framelink Figma MCP 서버를 포크하여 NCDS 기반의 추가 구현을 포함합니다. [Cursor](https://cursor.sh/) 및 기타 AI 기반 코딩 도구에 [Model Context Protocol](https://modelcontextprotocol.io/introduction) 서버를 통해 Figma 파일에 대한 접근 권한을 부여하세요.
 
 Cursor가 Figma 디자인 데이터에 접근할 수 있을 때, 스크린샷을 붙여넣는 것과 같은 대안적인 접근 방식보다 **훨씬** 더 정확하게 디자인을 한 번에 구현할 수 있습니다.
 
@@ -59,7 +59,7 @@ Cursor가 Figma 디자인 데이터에 접근할 수 있을 때, 스크린샷을
 
 많은 코드 편집기와 기타 AI 클라이언트는 MCP 서버를 관리하기 위해 구성 파일을 사용합니다.
 
-`figma-developer-mcp` 서버는 다음을 구성 파일에 추가하여 설정할 수 있습니다.
+`figma-developer-mcp-ncds` 서버는 다음을 구성 파일에 추가하여 설정할 수 있습니다.
 
 > 참고: 이 서버를 사용하려면 Figma 액세스 토큰을 생성해야 합니다. Figma API 액세스 토큰을 생성하는 방법에 대한 지침은 [여기](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)에서 찾을 수 있습니다.
 
@@ -68,9 +68,9 @@ Cursor가 Figma 디자인 데이터에 접근할 수 있을 때, 스크린샷을
 ```json
 {
   "mcpServers": {
-    "Framelink Figma MCP": {
+    "NCDS Figma MCP": {
       "command": "npx",
-      "args": ["-y", "figma-developer-mcp", "--figma-api-key=YOUR-KEY", "--stdio"]
+      "args": ["-y", "figma-developer-mcp-ncds", "--figma-api-key=YOUR-KEY", "--stdio"]
     }
   }
 }
@@ -81,9 +81,9 @@ Cursor가 Figma 디자인 데이터에 접근할 수 있을 때, 스크린샷을
 ```json
 {
   "mcpServers": {
-    "Framelink Figma MCP": {
+    "NCDS Figma MCP": {
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "figma-developer-mcp", "--figma-api-key=YOUR-KEY", "--stdio"]
+      "args": ["/c", "npx", "-y", "figma-developer-mcp-ncds", "--figma-api-key=YOUR-KEY", "--stdio"]
     }
   }
 }
@@ -91,7 +91,7 @@ Cursor가 Figma 디자인 데이터에 접근할 수 있을 때, 스크린샷을
 
 또는 `env` 필드에 `FIGMA_API_KEY`와 `PORT`를 넣을 수 있습니다.
 
-Framelink Figma MCP 서버를 구성하는 방법에 대한 자세한 정보가 필요하면 [Framelink 문서](https://www.framelink.ai/docs/quickstart?utm_source=github&utm_medium=readme&utm_campaign=readme)를 참조하세요.
+NCDS Figma MCP 서버를 구성하는 방법에 대한 자세한 정보가 필요하면 [Framelink 문서](https://www.framelink.ai/docs/quickstart?utm_source=github&utm_medium=readme&utm_campaign=readme)를 참조하세요.
 
 ## 스타 히스토리
 
@@ -99,4 +99,4 @@ Framelink Figma MCP 서버를 구성하는 방법에 대한 자세한 정보가 
 
 ## 더 알아보기
 
-Framelink Figma MCP 서버는 단순하지만 강력합니다. [Framelink](https://framelink.ai?utm_source=github&utm_medium=readme&utm_campaign=readme) 사이트에서 더 많은 정보를 얻으세요.
+이 NCDS Figma MCP 서버는 Framelink 프로젝트에서 포크되어 NCDS 기반의 추가 소스 생성 기능을 구현합니다. 원본 Framelink Figma MCP 서버는 단순하지만 강력합니다. [Framelink](https://framelink.ai?utm_source=github&utm_medium=readme&utm_campaign=readme) 사이트에서 더 많은 정보를 얻으세요.

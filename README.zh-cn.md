@@ -6,7 +6,7 @@
 </a>
 
 <div align="center">
-  <h1>Framelink Figma MCP 服务器</h1>
+  <h1>Framelink Figma MCP 服务器 + NCDS</h1>
   <p>
     🌐 可用语言:
     <a href="README.md">English (英语)</a> |
@@ -32,7 +32,7 @@
 
 <br/>
 
-通过此 [Model Context Protocol](https://modelcontextprotocol.io/introduction) 服务器，为 [Cursor](https://cursor.sh/) 和其他 AI 驱动的编码工具提供 Figma 文件访问权限。
+此项目从 Framelink Figma MCP 服务器分支，包含了基于 NCDS 的额外实现。通过此 [Model Context Protocol](https://modelcontextprotocol.io/introduction) 服务器，为 [Cursor](https://cursor.sh/) 和其他 AI 驱动的编码工具提供 Figma 文件访问权限。
 
 当 Cursor 可以访问 Figma 设计数据时，它比粘贴截图等替代方法**更**能一次性准确实现设计。
 
@@ -59,7 +59,7 @@
 
 许多代码编辑器和其他 AI 客户端使用配置文件来管理 MCP 服务器。
 
-可以通过将以下内容添加到配置文件中来设置 `figma-developer-mcp` 服务器。
+可以通过将以下内容添加到配置文件中来设置 `figma-developer-mcp-ncds` 服务器。
 
 > 注意：您需要创建 Figma 访问令牌才能使用此服务器。有关如何创建 Figma API 访问令牌的说明，请参见[此处](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)。
 
@@ -68,9 +68,9 @@
 ```json
 {
   "mcpServers": {
-    "Framelink Figma MCP": {
+    "NCDS Figma MCP": {
       "command": "npx",
-      "args": ["-y", "figma-developer-mcp", "--figma-api-key=YOUR-KEY", "--stdio"]
+      "args": ["-y", "figma-developer-mcp-ncds", "--figma-api-key=YOUR-KEY", "--stdio"]
     }
   }
 }
@@ -81,9 +81,9 @@
 ```json
 {
   "mcpServers": {
-    "Framelink Figma MCP": {
+    "NCDS Figma MCP": {
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "figma-developer-mcp", "--figma-api-key=YOUR-KEY", "--stdio"]
+      "args": ["/c", "npx", "-y", "figma-developer-mcp-ncds", "--figma-api-key=YOUR-KEY", "--stdio"]
     }
   }
 }
@@ -91,7 +91,7 @@
 
 或者您可以在 `env` 字段中设置 `FIGMA_API_KEY` 和 `PORT`。
 
-有关如何配置 Framelink Figma MCP 服务器的更多信息，请参阅 [Framelink 文档](https://www.framelink.ai/docs/quickstart?utm_source=github&utm_medium=readme&utm_campaign=readme)。
+有关如何配置 NCDS Figma MCP 服务器的更多信息，请参阅 [Framelink 文档](https://www.framelink.ai/docs/quickstart?utm_source=github&utm_medium=readme&utm_campaign=readme)。
 
 ## 星标历史
 
@@ -99,4 +99,4 @@
 
 ## 了解更多
 
-Framelink Figma MCP 服务器简单但功能强大。在 [Framelink](https://framelink.ai?utm_source=github&utm_medium=readme&utm_campaign=readme) 网站上了解更多信息。
+此 NCDS Figma MCP 服务器从 Framelink 项目分支并实现了基于 NCDS 的额外源代码生成功能。原始的 Framelink Figma MCP 服务器简单但功能强大。在 [Framelink](https://framelink.ai?utm_source=github&utm_medium=readme&utm_campaign=readme) 网站上了解更多信息。
